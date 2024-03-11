@@ -1,2 +1,5 @@
-# Intune-Scripts
- Collection of scripts to enhance Microsoft Intune administration
+# Intune Scripts
+ 
+## Overview
+
+This repository is a collection of various scripts for Windows and Mac administration.
