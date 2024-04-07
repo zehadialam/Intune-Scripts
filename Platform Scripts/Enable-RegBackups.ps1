@@ -8,7 +8,7 @@ $valueName = "EnablePeriodicBackup"
 
 if (Test-Path $keyPath) {
     $keyValue = (Get-ItemProperty -Path $keyPath -Name $valueName -ErrorAction SilentlyContinue).$valueName
-    if ($null -eq $keyValue) {
-        New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\Configuration Manager" -Name "EnablePeriodicBackup" -PropertyType DWord -Value 1
+    if (-not $keyValue) {
+        New-ItemProperty -Path $keypath -Name $valueName -PropertyType DWord -Value 1
     }
 }
